@@ -1,0 +1,40 @@
+
+
+ <!-- 3 days -->
+<div style="margin: 50px; padding: 50px" class="row">
+  <div class="col-8">
+    <form [formGroup]="registrationForm" (ngSubmit)="evtClick()">
+      <div class="form-group">
+        <label for="firstID">FirstName *</label>
+        <input
+          id="firstID"
+          type="text"
+          class="form-control"
+          name="firstname"
+          formControlName="userFirstname"
+        />
+        <!-- <span *ngIf="registrationForm.get('userFirstname')?.touched &&
+                     registrationForm.get('userFirstname')?.pristine "
+          style="color: red"
+          >Please enter the firstname</span
+        > -->
+          <span *ngIf="registrationForm.get('userFirstname')?.touched &&
+                       registrationForm.get('userFirstname')?.errors?.['required']"
+          style="color: red"
+          >Please enter the firstname</span
+        >
+
+
+         <span  *ngIf="registrationForm.get('userFirstname')?.touched &&
+                       registrationForm.get('userFirstname')?.errors?.['minlength']"
+          style="color: red"
+          >Please Enter atleast 3 charcters</span
+        >
+        <br />
+         <!-- <button class="btn btn-secondary" (click)="evtClick()"> Click </button> |  -->
+         <button class="btn btn-primary" type="submit" > Click </button>
+      </div>
+    </form>
+  </div>
+</div>
+    

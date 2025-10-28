@@ -1,0 +1,76 @@
+
+<!-- 
+<p>{{words  | uppercase}}</p>
+
+
+<p>{{words1 | lowercase}}</p> -->
+
+
+
+{{todayDate}}
+
+<br>
+
+{{todayDate | date | uppercase}}
+
+<br>
+{{todayDate | date : 'short'}}
+
+
+<br>
+{{todayDate | date : 'medium'  | lowercase}}
+
+
+<br>
+{{todayDate | date : 'full'}}
+
+
+
+<br>
+
+{{salary | currency}}
+
+
+<!-- 
+<input type="text" [value]="words|uppercase"  >
+
+<input type="text" [value]="words1|lowercase"  > -->
+
+
+
+
+<hr>
+
+<h2>Test Custome Pipe</h2>
+
+
+{{ "Hello world"        | longText }}
+
+<br>
+
+{{ "MY Name IS Angular" | longText}}
+
+
+<br>
+
+
+<!-- below paragraph for 20 -->
+<p>
+  {{"Get live cricket scores, cricket updates of upcoming International, domestic and T20 matches. Catch all the latest videos, news about cricket on " | longText : 20 : '...' | lowercase}}
+</p>
+
+
+
+<!-- below paragrpah for 15 -->
+<p>
+  {{"Fast live scores and ball by ball commentary, Notification updates for live cricket matches, Easy to read latest cricket news, Cricket videos. " | longText : 15 : '>>>' | uppercase}}
+</p>
+
+
+
+
+<!-- below paragrpah for 15 -->
+<p>
+  {{"educationafsajbfakjs;f;savflkjsa.fb;ksaffb;kbjsabkjfabs;kfjasbf;ksand;ksajfdsakfsakjdbsa;kfda"
+   | longText : 25 : '***'}}
+</p>
